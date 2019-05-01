@@ -13,11 +13,6 @@ img {
     height: 250px;
 }
 
-.flipping {
-    animation-name: flip;
-    animation-duration: 1s;
-}
-
 button {
     display: block;
     margin: 20px auto;
@@ -29,10 +24,20 @@ h1 {
     margin-top: 100px;
 }
 
-@keyframes flip {
+.flipping {
+    animation-name: flip-coin;
+    animation-duration: 0.8s;
+}
+
+@keyframes flip-coin {
     from {
         transform: rotateY(0deg);
     }
+
+    50% {
+        transform: scale(1.5) rotateY(180deg);
+    }
+
     to {
         transform: rotateY(360deg);
     }
